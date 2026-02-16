@@ -49,12 +49,12 @@
 
   .captionInner {
     width: 100%;
-    padding-left: calc(var(--bs-gutter-x, 0.75rem) + #{$content-inset});
-    padding-right: calc(var(--bs-gutter-x, 0.75rem) + #{$content-inset});
+   
     display: flex;
     align-items: center;
   }
 
+  /* Carousel root (className from Hero); aligns with navbar via captionInner */
   .textCarousel {
     position: relative;
     width: 100%;
@@ -64,57 +64,13 @@
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   }
 
+  /* Passed to Carousel as slideClassName for consistent slide height/spacing */
   .slideContent {
     padding-bottom: 3rem;
     min-height: 280px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    transition: opacity 0.4s ease-in-out;
-  }
-
-  .fadeIn {
-    opacity: 1;
-  }
-
-  .fadeOut {
-    opacity: 0;
-  }
-
-  .indicators {
-    position: absolute;
-    bottom: -2.5rem;
-    left: 0;
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-    z-index: 10;
-  }
-
-  .indicator {
-    width: 10px;
-    height: 10px;
-    padding: 0;
-    border-radius: 50%;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.5);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
-    flex-shrink: 0;
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.85);
-    }
-
-    &:focus {
-      outline: none;
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
-    }
-  }
-
-  .indicatorActive {
-    background-color: #fff;
-    transform: scale(1.15);
   }
 
   .subTitle,
@@ -158,11 +114,6 @@
     .textCarousel .slideContent {
       padding-bottom: 2.5rem;
       min-height: 220px;
-    }
-
-    .indicators {
-      bottom: -2rem;
-      justify-content: center;
     }
 
     h1 {

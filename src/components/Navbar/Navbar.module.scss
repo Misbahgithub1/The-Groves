@@ -26,7 +26,7 @@
 
   list-style: none;
   margin: 0;
-  padding: 0 10px; /* horizontal inset matches top bar */
+ 
 
   gap: 0.5rem;
   display: flex;
@@ -38,11 +38,12 @@ ul.navList {
   
   list-style: none;
   margin: 0;
-  padding: 0 10px; /* same inset for <ul> elements too */
+  
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0%;
 }
 
 .navLink {
