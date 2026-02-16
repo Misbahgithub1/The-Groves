@@ -1,15 +1,45 @@
+@use "../../styles/variables" as *;
+
 .navbar {
-  background-color: transparent !important; 
-  border-bottom: 1px solid rgba(15, 23, 42, 0.06); 
-  backdrop-filter: blur(10px);
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1020;
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+  
+}
+
+.navSection {
+  pointer-events: auto;
+  background-color: transparent;
+
+  padding: 10px;
+}
+.customBorder {
+  border-top: 2px solid $border-color;
+  border-bottom: 2px solid $border-color;
 }
 
 .navList {
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
   gap: 0.5rem;
   display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+ul.navList {
+  
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -17,10 +47,16 @@
   position: relative;
   padding-inline: 0.9rem;
   padding-block: 0.6rem;
-  font-size: 0.9rem;
+  font-size: 0.8125rem; /* 13px in rem */
   font-weight: 500;
-  color: #64748b;
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: $text-light !important;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   transition: color 120ms ease-out;
 
   &:hover {
@@ -28,14 +64,14 @@
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0.9rem;
     right: 0.9rem;
-    bottom: 0.25rem;
+    bottom: -0.1rem;
     height: 2px;
     border-radius: 999px;
-    background: linear-gradient(90deg, #AD8749, #DCBB75);
+    background: linear-gradient(90deg, #ad8749, #dcbb75);
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 150ms ease-out;

@@ -15,6 +15,7 @@ const Hero: React.FC = () => {
               src={img}
               alt={`Slide ${index + 1}`}
             />
+            asd
             <Carousel.Caption className={styles.caption}>
               <h1>Discover Amazing Experiences</h1>
               <p>Explore our services and get inspired by our creative solutions.</p>

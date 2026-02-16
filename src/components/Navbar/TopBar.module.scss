@@ -1,35 +1,32 @@
-.topBar {
-  padding-block: 1rem;
-  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+@use "../../styles/variables" as *;
 
+.topBar2 {
+  padding-block: 1rem;
+  background-color: transparent;
+  /* sit above hero */
+  position: static; /* container will position it */
 }
 
-.brand {
+.brand2 {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
-  
 }
 
-
-
-.logo {
+.logo2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 100%;
- 
 }
 
-.logo img {
+.logo2 img {
   width: 100%;
-  
   object-fit: contain;
 }
 
-
-.socialGroup {
+.socialGroup2 {
   display: flex;
   gap: 0.75rem;
 
@@ -40,28 +37,26 @@
 
     width: 32px;
     height: 32px;
-   
-    
-    color: #a1a1a1;
+
+      color: $text-light !important;
     font-size: 1.2rem;
     transition: all 0.2s ease;
 
     &:hover {
-       background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.1);
       color: #fff;
     }
   }
 }
 
-
-.socialIcon:hover {
+.socialIcon2:hover {
   background-color: #0f172a;
   color: #ffffff;
   transform: translateY(-1px);
   box-shadow: 0 8px 20px rgba(15, 23, 42, 0.25);
 }
 
-.socialLabel {
+.socialLabel2 {
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -70,7 +65,7 @@
     sans-serif;
 }
 
-.loginButton {
+.loginButton2 {
   border: 1px solid rgba(15, 23, 42, 0.12);
   border-radius: 16px;
   padding: 0.35rem 0.95rem;
@@ -88,26 +83,23 @@
   background: linear-gradient(to bottom, #AD8749, #DCBB75);
 }
 
-.loginButton:hover {
- background: linear-gradient(to bottom, #9c783e, #DCBB75);
+.loginButton2:hover {
+  background: linear-gradient(to bottom, #9c783e, #DCBB75);
   color: #ffffff;
- 
+  
   box-shadow: 0 10px 26px rgba(15, 23, 42, 0.28);
 }
 
-
-
 @media (max-width: 575.98px) {
-  .brandText {
+  .brandText2 {
     display: none;
   }
 
-  .loginButton {
+  .loginButton2 {
     display: none;
   }
 
-  .languageButton {
+  .languageButton2 {
     padding-inline: 0.6rem;
   }
 }
-

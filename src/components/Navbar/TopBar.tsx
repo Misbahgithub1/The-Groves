@@ -14,7 +14,7 @@ import type {
 import enFlag from '../../assets/images/en.png';
 import arFlag from '../../assets/images/en.png';
 
-const TopBar: React.FC = () => {
+const TopBar2: React.FC = () => {
   const [language, setLanguage] = useState<LanguageCode>('en');
 
   const languages: LanguageOption[] = [
@@ -23,34 +23,31 @@ const TopBar: React.FC = () => {
   ];
 
   return (
-    <div className={`${styles.topBar} container`}>
+    <div className={`${styles.topBar2} container`}>      
       <div className="row align-items-center">
-        {/* Left Column */}
         <div className="col-6 col-md-4 d-flex align-items-center">
-          <a href="/" className={styles.brand}>
-            <img src={logoImg} alt="Logo" className={styles.logo} />
+          <a href="/" className={styles.brand2}>
+            <img src={logoImg} alt="Logo" className={styles.logo2} />
           </a>
         </div>
-
-        {/* Right Column */}
         <div className="col-6 col-md-8">
           <div className="d-flex justify-content-end align-items-center gap-3">
-            <div className={styles.socialGroup}>
+            <div className={styles.socialGroup2}>
               <a href="#" aria-label="TikTok">
                 <FontAwesomeIcon icon={faTiktok} />
               </a>
-              <a href="#" aria-label="Instagram" className={styles.filledIcon}>
+              <a href="#" aria-label="Instagram" className={styles.filledIcon2}>
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
               <a href="#" aria-label="X">
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
-              <a href="#" aria-label="Snapchat" className={styles.filledIcon}>
+              <a href="#" aria-label="Snapchat" className={styles.filledIcon2}>
                 <FontAwesomeIcon icon={faSnapchat} />
               </a>
             </div>
 
-            <button type="button" className={styles.loginButton}>
+            <button type="button" className={styles.loginButton2}>
               Log in
             </button>
 
@@ -66,4 +63,4 @@ const TopBar: React.FC = () => {
   );
 };
 
-export default TopBar;
+export default TopBar2;
