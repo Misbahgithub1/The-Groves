@@ -1,32 +1,33 @@
 @use "../../styles/variables" as *;
 
-.topBar2 {
+.topBar {
   padding-block: 1rem;
+  padding-inline: 10px; /* match navbar horizontal padding */
   background-color: transparent;
   /* sit above hero */
   position: static; /* container will position it */
 }
 
-.brand2 {
+.brand {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
 }
 
-.logo2 {
+.logo {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
 
-.logo2 img {
+.logo img {
   width: 100%;
   object-fit: contain;
 }
 
-.socialGroup2 {
+.socialGroup {
   display: flex;
   gap: 0.75rem;
 
@@ -49,14 +50,14 @@
   }
 }
 
-.socialIcon2:hover {
+.socialIcon:hover {
   background-color: #0f172a;
   color: #ffffff;
   transform: translateY(-1px);
   box-shadow: 0 8px 20px rgba(15, 23, 42, 0.25);
 }
 
-.socialLabel2 {
+.socialLabel {
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -65,7 +66,7 @@
     sans-serif;
 }
 
-.loginButton2 {
+.loginButton {
   border: 1px solid rgba(15, 23, 42, 0.12);
   border-radius: 16px;
   padding: 0.35rem 0.95rem;
@@ -83,7 +84,7 @@
   background: linear-gradient(to bottom, #AD8749, #DCBB75);
 }
 
-.loginButton2:hover {
+.loginButton:hover {
   background: linear-gradient(to bottom, #9c783e, #DCBB75);
   color: #ffffff;
   
@@ -91,15 +92,15 @@
 }
 
 @media (max-width: 575.98px) {
-  .brandText2 {
+  .brandText {
     display: none;
   }
 
-  .loginButton2 {
+  .loginButton {
     display: none;
   }
 
-  .languageButton2 {
+  .languageButton {
     padding-inline: 0.6rem;
   }
 }

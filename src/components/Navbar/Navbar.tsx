@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.scss";
-import TopBar2 from "./TopBar";
+import TopBar from "./TopBar";
 
 type NavKey = "dine" | "visit" | "events" | "map" | "story" | "contact";
 
-const Navbar2: React.FC = () => {
+const Navbar: React.FC = () => {
   const [activeItem, setActiveItem] = useState<NavKey>("dine");
 
   const navItems: { key: NavKey; label: string; href: string }[] = [
@@ -18,7 +18,7 @@ const Navbar2: React.FC = () => {
 
   return (
     <div className={styles.navbar}>
-      <TopBar2 />
+      <TopBar />
        <div className={`${styles.customBorder}`}>
       <nav className={`${styles.navSection} container`}>
        
@@ -51,4 +51,4 @@ const Navbar2: React.FC = () => {
   );
 };
 
-export default Navbar2;
+export default Navbar;

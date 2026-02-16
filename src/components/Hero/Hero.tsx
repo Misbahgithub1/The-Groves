@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
             />
             asd
             <Carousel.Caption className={styles.caption}>
-              <h1>Discover Amazing Experiences</h1>
+              <h1>The new era of luxury</h1>
               <p>Explore our services and get inspired by our creative solutions.</p>
               <Button variant="primary" size="lg">
                 Get Started
