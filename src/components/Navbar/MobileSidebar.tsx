@@ -107,10 +107,10 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({
             onChange={onLanguageChange}
           />
          <LoginButton />
-          <SocialMedia fontSize="1.25rem" />
+          <SocialMedia fontSize="1.25rem" className={styles.footerIcons} />
         </div>
       </aside>
-    </>
+    </> 
   );
 };
 

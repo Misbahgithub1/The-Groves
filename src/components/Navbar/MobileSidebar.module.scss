@@ -141,3 +141,35 @@ padding: 4rem 1rem;
   }
 }
 
+.footerIcons{
+position: absolute;
+
+    bottom: 2rem;
+}
+
+
+
+
+
+// ################# MEDIA QUERY FOR SPECIFIC MOBILE DEVICE ############3
+
+@media (min-width: 370px) 
+  and (max-width: 380px) 
+  and (orientation: portrait) {
+
+.sidebarActions {
+  
+  gap: $spacing-md;
+padding: 1rem;
+  
+}
+.sidebarNav {
+
+  li {
+    padding: 1rem;
+  }
+
+}
+}
+
+
