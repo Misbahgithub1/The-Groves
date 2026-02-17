@@ -7,7 +7,7 @@
 
 .track {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
@@ -67,38 +67,7 @@
 
 }
 
-.indicators {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-}
 
-.dot {
-  width: 10px;
-  height: 10px;
-  padding: 0;
-  border-radius: 50%;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.4);
-  cursor: pointer;
-  transition: background-color 0.25s ease, transform 0.25s ease;
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-
-  &:focus-visible {
-    outline: 2px solid rgba(255, 255, 255, 0.8);
-    outline-offset: 2px;
-  }
-}
-
-.dotActive {
-  background-color: #fff;
-  transform: scale(1.2);
-}
 
 @media (max-width: 768px) {
   .card {

@@ -6,6 +6,7 @@ import MallSection from './components/MallSection/MallSection';
 import AttractionsSection from './components/AttractionsSection/AttractionsSection';
 import CuisineSection from './components/CuisineSection/CuisineSection';
 import './App.scss'
+import ExperienceSection from './components/ExperienceSection/ExperienceSection';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
       <MallSection />
       <AttractionsSection />
       <CuisineSection />
+
+      <ExperienceSection/>
     </>
   )
 }

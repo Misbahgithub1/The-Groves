@@ -10,15 +10,15 @@ export interface MasonryCarouselItem {
 }
 
 export interface MasonryCarouselProps {
-  /** List of items: image URL, title, and size (aspect ratio) */
+
   items: MasonryCarouselItem[];
-  /** Auto-advance interval in ms. Set to 0 to disable. */
+
   interval?: number;
-  /** Show dot indicators below the track */
+
   showIndicators?: boolean;
-  /** Accessible label for the carousel region */
+
   ariaLabel?: string;
-  /** Optional class name for the root wrapper */
+
   className?: string;
   
 }
@@ -95,7 +95,7 @@ export default function MasonryCarousel({
           </div>
         ))}
       </div>
-
+{/* 
       {showIndicators && total > 1 && (
         <div className={styles.indicators} role="tablist" aria-label="Carousel slides">
           {items.map((_, index) => (
@@ -110,7 +110,7 @@ export default function MasonryCarousel({
             />
           ))}
         </div>
-      )}
+      )} */}
     </div>
   );
 }

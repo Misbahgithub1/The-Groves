@@ -32,16 +32,17 @@
 
 .card {
   height: 100%;
-  background: rgba(40, 54, 6, 0.6);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 10px;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
-    border-color: rgba(255, 255, 255, 0.15);
+   
     box-shadow: $shadow-light;
   }
 }
@@ -50,6 +51,8 @@
   position: relative;
   aspect-ratio: 3 / 2;
   overflow: hidden;
+  border-top-left-radius: 16px ;
+  border-top-right-radius: 16px ;
 
   img {
     width: 100%;
