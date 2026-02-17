@@ -7,7 +7,8 @@
   width: 100%;
   z-index: 2000;
   
-}
+  
+
 
 .navSection {
   pointer-events: auto;
@@ -89,4 +90,5 @@ ul.navList {
   &::after {
     transform: scaleX(1);
   }
+}
 }
