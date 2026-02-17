@@ -17,6 +17,19 @@ const Footer: React.FC = () => {
     return (
         <footer className={styles.footer}>
             <Container>
+                <Row className="mb-4 d-md-none">
+                    <Col xs={12}>
+                        <div className={styles.LinksRow}>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img
+                                    src={logoImg}
+                                    alt="The Groves Logo"
+                                    className={styles.appLogo}
+                                />
+                            </a>
+                        </div>
+                    </Col>
+                </Row>
 
                 {/* ================= First Row ================= */}
                 <Row className="mb-4">
@@ -80,7 +93,7 @@ const Footer: React.FC = () => {
 
                 {/* ================= Third Row ================= */}
                 <Row className="pt-4 align-items-center">
-                    <Col xs={12} md={9}>
+                    <Col xs={12} md={9} className="d-none d-md-block">
                         <div className={styles.LinksRow}>
                             <a href="#" target="_blank" rel="noopener noreferrer">
                                 <img
