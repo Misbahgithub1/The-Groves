@@ -53,8 +53,8 @@
 .sidebarLogo {
   display: inline-block;
   img {
-    // height: 32px;
-    width: 189px;
+    
+  width: 189px;
     display: block;
     object-fit: contain;
   }
@@ -80,14 +80,15 @@
   padding: 0;
   border: none;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
-  color: $text-light;
+ background: transparent;
+  color: #cd9f5e;
+  font-size: 2rem;
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease;
 
   &:hover,
   &:focus-visible {
-    background: rgba(255, 255, 255, 0.15);
+    
     color: $text-white;
   }
 
@@ -100,7 +101,7 @@
 .sidebarNav {
   list-style: none;
   margin: 0;
-  padding: $spacing-md $spacing-lg $spacing-xl;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   gap: $spacing-xs;

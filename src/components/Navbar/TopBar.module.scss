@@ -18,7 +18,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  max-width: 140px;
+  
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -38,7 +38,7 @@
   border: none;
   border-radius: 8px;
   background: transparent;
-  color: #c0392b;
+  color: #cd9f5e;
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease;
 
@@ -58,16 +58,6 @@
   }
 }
 
-
-
-
-
-@media (min-width: 992px) {
-  .logo {
-    max-width: 180px;
-  }
-}
-
 @media (max-width: 575.98px) {
   .brandText {
     display: none;
@@ -76,4 +66,7 @@
   .languageButton {
     padding-inline: 0.6rem;
   }
+    .topBar {
+padding: 1rem;
+}
 }
