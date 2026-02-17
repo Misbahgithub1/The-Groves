@@ -1,0 +1,78 @@
+@use "../../styles/variables" as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: transparent;
+
+  &.scrolled {
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.customBorder {
+  border-top: 2px solid $border-color;
+  border-bottom: 2px solid $border-color;
+}
+
+.navSection {
+  pointer-events: auto;
+  background-color: transparent;
+  padding-block: 10px;
+}
+
+.navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+
+  li a {
+    position: relative;
+    padding: 0.6rem 0.9rem;
+    font-size: $font-xs;
+    font-weight: 500;
+    color: $text-light; 
+    font-family: $font-body;
+    text-decoration: none;
+    transition: color 0.15s ease-out;
+
+    &:hover {
+      color: $text-white; 
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0.9rem;
+      right: 0.9rem;
+      bottom: -0.1rem;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #ad8749, #dcbb75);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 150ms ease-out;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.navLinkActive {
+  color: $text-white; 
+
+  &::after {
+    transform: scaleX(1);
+  }
+}

@@ -1,0 +1,51 @@
+// src/index.scss
+@use './styles/variables' as vars;
+
+/* CSS Variables (optional for JS theme usage) */
+:root {
+  --color-text-light: #{vars.$text-light};
+  --color-text-dark: #{vars.$text-dark};
+  --color-border: #{vars.$border-color};
+  --color-bg-default: #{vars.$bg-default};
+}
+
+/* Global Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Base body styles */
+body {
+  font-family: vars.$font-body;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: vars.$text-light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Full viewport height, gradient fixed */
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    vars.$gradient-green-start 0%,
+    vars.$gradient-green-end 100%
+  );
+  background-repeat: no-repeat;     // gradient repeat na ho
+  background-attachment: fixed;     // scroll par same position me rahe
+  background-size: cover;           // poora viewport cover kare
+}
+
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

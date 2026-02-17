@@ -1,0 +1,207 @@
+// ----- Mobile sidebar & overlay -----
+@use "../../styles/variables" as *;
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2100;
+  // background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  &.overlayOpen {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2200;
+  background: linear-gradient(
+    135deg,
+    $gradient-green-start 0%,
+    $gradient-green-end 100%
+  );
+  border-left: 2px solid $border-color;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.2);
+
+  &.sidebarOpen {
+    transform: translateX(0);
+  }
+}
+
+.sidebarHeader {
+    display: flex;
+    padding: 1rem 2rem;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebarLogo {
+  display: inline-block;
+  img {
+    
+  width: 189px;
+    display: block;
+    object-fit: contain;
+  }
+}
+
+.sidebarActions {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+padding: 4rem 1rem;
+  flex-shrink: 0;
+ 
+}
+
+
+.closeBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+ background: transparent;
+  color: #cd9f5e;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    
+    color: $text-white;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+  }
+}
+
+.sidebarNav {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+  text-transform: uppercase;
+  padding-left: 0;
+
+  li {
+    position: relative;
+    display: block;
+    padding: 1.2rem;
+    font-size: $font-base;
+    border-radius: 8px;
+
+    // Top border for all items
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.2);
+      transition: background-color 0.2s ease;
+    }
+
+    // Bottom border only for last child
+    &:last-child::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.2);
+      transition: background-color 0.2s ease;
+    }
+
+    
+  }
+}
+
+.footerIcons{
+position: absolute;
+
+    bottom: 2rem;
+}
+
+
+// ################# MEDIA QUERY FOR SPECIFIC MOBILE DEVICE ############3
+
+@media (min-width: 370px) 
+  and (max-width: 380px) 
+  and (orientation: portrait) {
+
+.sidebarActions {
+  
+  gap: $spacing-md;
+padding: 1rem;
+  
+}
+.sidebarNav {
+
+  li {
+    padding: 1rem;
+  }
+
+}
+}
+
+// ############## MOBILE LANDSCAPE (small height) ################
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .sidebar {
+    height: 100vh;
+  }
+
+  .sidebarHeader {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .sidebarLogo img {
+    width: 150px;
+  }
+
+  .sidebarActions {
+    padding: 1.5rem 1rem;
+    gap: $spacing-md;
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  .sidebarNav li {
+    padding: 0.9rem 1rem;
+    font-size: $font-sm;
+  }
+
+  .footerIcons {
+    position: static;
+    margin-top: auto;
+    padding: 1rem 1rem 1.5rem;
+  }
+}
+
+
+

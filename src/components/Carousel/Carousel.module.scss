@@ -1,0 +1,114 @@
+/**
+ * Reusable Carousel component styles.
+
+ */
+
+.root {
+  position: relative;
+  width: 100%;
+  padding-bottom: 3rem;
+}
+
+.rootRtl {
+  direction: rtl;
+
+  .indicators {
+    left: auto;
+    right: 0;
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-left: 1.5rem;
+  }
+}
+
+.slidePane {
+  transition: opacity 0.4s ease-in-out;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 0rem;
+  left: 0;
+  width: 50%;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1.5rem;
+  z-index: 10;
+}
+
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
+  }
+}
+
+
+
+.indicatorActive {
+  background-color: #fff;
+  transform: scale(1.15);
+}
+
+
+@media (max-width: 768px) {
+  .indicators {
+    width: 100%;
+    padding-right: 1.25rem;
+    bottom: -10rem;
+  }
+
+  .rootRtl {
+    .indicators {
+      padding-right: 0;
+      padding-left: 1.25rem;
+    }
+  }
+}
+
+
+
+
+
+@media (min-width: 370px) 
+  and (max-width: 380px) 
+  and (orientation: portrait) {
+
+  .indicators {
+    width: 100%;
+    padding-right: 1.25rem;
+    bottom: -6rem !important;
+  }
+
+  .rootRtl {
+    .indicators {
+      padding-right: 0;
+      padding-left: 1.25rem;
+    }
+  }
+}

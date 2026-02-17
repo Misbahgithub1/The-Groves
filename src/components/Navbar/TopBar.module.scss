@@ -1,0 +1,72 @@
+@use "../../styles/variables" as *;
+
+.topBar {
+  width: 100%;
+  padding-block: 1rem;
+  background-color: transparent;
+  position: static;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.desktopActions {
+  flex-wrap: wrap;
+}
+
+.hamburger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #cd9f5e;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    background: rgba(192, 57, 43, 0.15);
+    color: #a93226;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(192, 57, 43, 0.4);
+  }
+
+  svg {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .brandText {
+    display: none;
+  }
+
+  .languageButton {
+    padding-inline: 0.6rem;
+  }
+    .topBar {
+padding: 1rem;
+}
+}

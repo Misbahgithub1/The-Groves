@@ -1,0 +1,148 @@
+@use "../../styles/variables" as *;
+
+.section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.heading {
+  font-family: $font-heading;
+  font-size: $h2-size;
+  font-weight: $regular-weight;
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
+  color: $text-white;
+}
+
+.intro {
+  color: $text-light;
+  font-size: $font-sm;
+  max-width: 49rem;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+.videoWrapper {
+  margin-bottom: 2.5rem;
+}
+
+.videoEmbed {
+  position: relative;
+  width: 100%;
+  max-width: 904px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.375rem;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+.cardWrapper {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  max-width: 904px;
+  border-radius: 1.5rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #2c3b15 !important;
+  text-align: left;
+  padding: 1.5rem;
+  color: $text-light !important;
+  box-shadow: $shadow-light;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+
+    
+  }
+}
+
+.price {
+  font-size: $font-xs;
+  margin-bottom: 0.5rem;
+  letter-spacing: $letter-spacing-sm;
+  color: $text-light;
+}
+
+.cardTitle {
+  font-family: $font-heading;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: $text-white;
+}
+
+.cardDesc {
+  color: $text-light;
+  font-size: $font-sm;
+  margin-bottom: 0;
+  width: 70%;
+  line-height: 1.5;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  color: $text-light;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .heading {
+    font-size: clamp(2.25rem, 6vw, $h1-size);
+  }
+
+  .intro {
+    font-size: $font-base;
+  }
+
+  .card {
+    max-width: 100%;
+    padding-bottom: 2.5rem;
+  }
+
+  .cardDesc {
+    width: 100%;
+    font-size: $font-base;
+    line-height: 1.6;
+  }
+
+  .cardTitle {
+    font-size: clamp(1.25rem, 5vw, 1.5rem);
+  }
+
+  .arrow {
+    top: auto;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    transform: none;
+  }
+}

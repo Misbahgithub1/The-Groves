@@ -1,0 +1,61 @@
+
+@use "../../styles/variables" as *;
+.languageDropdown {
+  position: relative; 
+  display: inline-flex;
+  align-items: center;
+
+
+  .languageButton {
+    display: flex !important;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    background: transparent;
+  
+  
+    // Remove default Bootstrap caret
+    &::after {
+      display: none !important;
+    }
+  
+    span {
+      color: #fff;
+      font-size: 0.85rem;
+    }
+  
+    &:focus {
+      box-shadow: none;
+    }
+    
+  }
+  
+  .menuItem {
+    display: flex !important;       
+    align-items: center;     
+    gap: 0.5rem;            
+    padding: 0.25rem 1rem; 
+    font-size: 0.85rem;
+  
+    img.flag {
+      width: 20px;        
+      height: auto;
+      border-radius: 2px;    
+    }
+  
+    span {
+      color: #000;         
+    }
+  }
+
+
+  .arrow {
+    color: $text-light; 
+    margin-right: 0rem;
+    font-size: 1.2rem;
+  }
+  
+  
+}
+
+

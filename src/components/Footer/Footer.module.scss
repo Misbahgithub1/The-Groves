@@ -1,0 +1,220 @@
+@use "../../styles/variables" as *;
+
+.footer {
+  color: $text-light;
+  padding: 3rem 0;
+  font-family: $font-body;
+  font-size: $font-xs;
+  border-top: 2px solid rgba(137, 137, 137, 0.534);
+
+  .logo {
+    max-width: 160px;
+    margin-bottom: 1rem;
+  }
+
+  .heading {
+    font-family: $font-heading;
+    font-size: clamp(1.75rem, 4vw, $h2-size);
+    font-weight: $light-weight;
+    color: $text-white;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    max-width: 32ch;
+  }
+
+  .subHeading {
+    font-family: $font-body;
+    letter-spacing: $letter-spacing-sm;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-size: $font-xs;
+  }
+
+  .links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 0rem;
+
+      a {
+        color: #ccc;
+        text-decoration: none;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .footerLink {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 0.25rem;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .separator {
+    margin: 0 0.25rem;
+    color: #ccc;
+  }
+
+  .downloadList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+
+    li a img {
+      height: 50px;
+      width: auto;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .LinksRow {
+
+    flex-wrap: wrap;
+    align-items: center;
+
+    justify-content: space-between;
+
+
+
+    .appLogo {
+      height: 40px;
+      width: auto;
+    }
+
+
+
+    .footerIcons {
+      display: flex;
+      justify-content: end;
+    }
+  }
+
+  .copyrightRow {
+    display: flex;
+    gap: 3rem;
+
+  }
+
+  .paymentWrapper {
+    display: flex;
+    justify-content: flex-end; 
+  }
+
+  .paymentList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    li img {
+      height: auto; // keep consistent size
+      width: auto;
+      object-fit: contain;
+      transition: opacity 0.2s ease;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+}
+
+a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: $font-sm;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+
+
+
+
+
+/* ===============================
+   Mobile Responsive
+   =============================== */
+
+   @media (max-width: 991px) {
+
+    .footer {
+  
+      padding: 2rem 0;
+  
+      /* First Row */
+      .heading {
+        font-size: 1.5rem;
+        max-width: 100%;
+        text-align: left;
+      }
+  
+      .downloadList {
+        justify-content: flex-start;
+        margin-top: 1rem;
+  
+        li a img {
+          height: 45px;
+        }
+      }
+  
+      /* Second Row */
+      .links {
+        margin-bottom: 1.5rem;
+      }
+  
+      /* Third Row */
+      .LinksRow {
+        justify-content: center;
+        text-align: left;
+        margin-bottom: 1rem;
+      }
+  
+      .footerIcons {
+        justify-content: flex-start !important;
+        margin-top: 1rem;
+      }
+  
+      /* Copyright Row */
+      .copyrightRow {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: left;
+        text-align: left;
+      }
+  
+      /* Payment Methods */
+      .paymentWrapper {
+        justify-content: flex-start;
+        margin-top: 1rem;
+      }
+  
+      .paymentList {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+  }
+  

@@ -1,0 +1,138 @@
+@use "../../styles/variables" as *;
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  .heroBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .darkOverlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.338);
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  .caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    z-index: 15;
+  }
+
+  .captionInner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 10rem;
+
+  }
+
+  .slideContent {
+    padding-bottom: 3rem;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .subTitle,
+  .description {
+    font-family: $font-body;
+    color: $text-light;
+  }
+
+  .subTitle {
+    font-size: $font-xs;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing-sm;
+  }
+
+  .description {
+    font-size: $font-sm;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    white-space: pre-wrap; 
+    word-break: break-word; 
+    
+  }
+
+  .heading {
+    font-family: $font-heading;
+    font-size: $h1-size;
+    font-weight: $regular-weight;
+    margin-bottom: 1.5rem;
+    line-height: 1.15;
+    color: $text-white;
+  }
+
+
+
+    @media (max-width: 768px) {
+    .darkOverlay {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.666);
+    }
+    
+    .captionInner {
+      margin-top: 0;
+      padding-top: 0rem;
+      padding: 0rem 2rem;
+      
+    }
+    .heading {
+      font-size: $h2-size;
+      font-weight: $regular-weight;
+    }
+
+    .description {
+      font-size: $font-sm;
+      line-height: 1.6;
+      white-space: normal;
+    }
+  }
+
+}
+
+.heroRtl {
+  direction: rtl;
+
+  .darkOverlay {
+    left: auto;
+    right: 0;
+  }
+
+  .captionInner {
+    text-align: right;
+  }
+}
+
