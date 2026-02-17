@@ -29,8 +29,8 @@ export default function ExperienceSection({ language }: ExperienceSectionProps) 
   return (
     <section className={styles.section}>
       <Container>
-        <Row className="align-items-center">
-          {/* Left Column - 4 units */}
+        <Row className={`align-items-center ${language === 'ar' ? styles.rtl : ''}`}>
+          {/* Left Column */}
           <Col md={3} className={styles.leftCol}>
             <h2 className={styles.heading}>{t.experienceSection.heading}</h2>
             <Button
@@ -40,16 +40,14 @@ export default function ExperienceSection({ language }: ExperienceSectionProps) 
             />
           </Col>
 
-          {/* Right Column - 8 units */}
+          {/* Right Column */}
           <Col md={9} className={styles.rightCol}>
-          
-           
             <MasonryCarousel
-          items={SLIDER_ITEMS}
-          interval={4500}
-          ariaLabel="Attractions carousel"
-        />
-           
+              items={SLIDER_ITEMS}
+              interval={4500}
+              ariaLabel="Attractions carousel"
+              className={language === 'ar' ? styles.rtl : ''}
+            />
           </Col>
         </Row>
       </Container>

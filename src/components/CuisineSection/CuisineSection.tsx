@@ -48,7 +48,9 @@ export default function CuisineSection({ language }: CuisineSectionProps) {
     },
   ];
   return (
-    <section className={styles.section}>
+    <section
+      className={`${styles.section} ${language === 'ar' ? styles.rtl : ''}`}
+    >
       <Container>
         <div className={styles.header}>
           <h2 className={styles.heading}>{t.cuisineSection.heading}</h2>

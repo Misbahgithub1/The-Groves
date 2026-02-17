@@ -126,6 +126,18 @@
   }
 }
 
+.rtl {
+  direction: rtl;
+
+  .cardFooter {
+    flex-direction: row-reverse;
+  }
+
+  .arrowButton:hover {
+    transform: translateX(-2px);
+  }
+}
+
 
 @media (max-width: 768px) {
   .section {
