@@ -49,11 +49,10 @@
 
   .captionInner {
     width: 100%;
-   
     display: flex;
     align-items: center;
-    margin-top: 5%;
-    
+    padding-top: 10rem;
+
   }
 
   .slideContent {
@@ -95,27 +94,32 @@
     line-height: 1.15;
     color: $text-white;
   }
-}
 
 
-@media (max-width: 768px) {
 
-.darkOverlay {
-    width: 100% !important;
-  }
-
-
-  .heading {
-    font-size: $h2-size !important;
-    font-weight: $regular-weight;
-  }
+    @media (max-width: 768px) {
+    .darkOverlay {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.666);
+    }
+    
+    .captionInner {
+      margin-top: 0;
+      padding-top: 0rem;
+      padding: 0rem 2rem;
+      
+    }
+    .heading {
+      font-size: $h2-size;
+      font-weight: $regular-weight;
+    }
 
     .description {
-    font-size: $font-sm;
-    line-height: 1.6;
-  
-    white-space: normal; 
-    
+      font-size: $font-sm;
+      line-height: 1.6;
+      white-space: normal;
+    }
   }
+
 }
 

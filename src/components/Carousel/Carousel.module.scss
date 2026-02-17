@@ -6,6 +6,7 @@
 .root {
   position: relative;
   width: 100%;
+  padding-bottom: 3rem;
 }
 
 .slidePane {
@@ -22,11 +23,14 @@
 
 .indicators {
   position: absolute;
-  bottom: -5.5rem;
-  left: 33rem;
+  bottom: 0rem;
+  left: 0;
+  width: 50%;
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  justify-content: flex-end;
+  padding-right: 1.5rem;
   z-index: 10;
 }
 
@@ -62,8 +66,23 @@
 
 @media (max-width: 768px) {
   .indicators {
-    bottom: -2rem;
-    left: 10%;
-    
+    width: 100%;
+    padding-right: 1.25rem;
+    bottom: -10rem;
+  }
+}
+
+
+
+
+
+@media (min-width: 370px) 
+  and (max-width: 380px) 
+  and (orientation: portrait) {
+
+  .indicators {
+    width: 100%;
+    padding-right: 1.25rem;
+    bottom: -6rem !important;
   }
 }
