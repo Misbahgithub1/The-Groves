@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Navbar.module.scss";
 import TopBar from "./TopBar";
 
@@ -6,6 +6,7 @@ type NavKey = "dine" | "visit" | "events" | "map" | "story" | "contact";
 
 const Navbar: React.FC = () => {
   const [activeItem, setActiveItem] = useState<NavKey>("dine");
+  const [scrolled, setScrolled] = useState(false); // scroll state
 
   const navItems: { key: NavKey; label: string; href: string }[] = [
     { key: "dine", label: "Dine With Us", href: "#dine" },
@@ -16,12 +17,23 @@ const Navbar: React.FC = () => {
     { key: "contact", label: "Contact Us", href: "#contact" },
   ];
 
+  // Handle scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50); // threshold 50px
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className={styles.navbar}>
+    <div className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
       <TopBar />
-       <div className={`${styles.customBorder}`}>
-      <nav className={`${styles.navSection} container`}>
-       
+      <div className={`${styles.customBorder}`}>
+        <nav className={`${styles.navSection} container`}>
           <div className="row">
             <div className="col-12">
               <ul className={`${styles.navList}`}>
@@ -44,8 +56,7 @@ const Navbar: React.FC = () => {
               </ul>
             </div>
           </div>
-       
-      </nav>
+        </nav>
       </div>
     </div>
   );
