@@ -13,6 +13,7 @@ import type {
 
 import enFlag from '../../assets/images/en.png';
 import arFlag from '../../assets/images/en.png';
+import SocialMedia from '../SocialMedia/SocialMedia';
 
 const TopBar: React.FC = () => {
   const [language, setLanguage] = useState<LanguageCode>('en');
@@ -33,30 +34,18 @@ const TopBar: React.FC = () => {
           </div>
           <div className="col-6 col-md-8 d-flex justify-content-end">
             <div className="d-flex align-items-center gap-3">
-            <div className={styles.socialGroup}>
-              <a href="#" aria-label="TikTok">
-                <FontAwesomeIcon icon={faTiktok} />
-              </a>
-              <a href="#" aria-label="Instagram" className={styles.filledIcon}>
-                <FontAwesomeIcon icon={faInstagram} />
-              </a>
-              <a href="#" aria-label="X">
-                <FontAwesomeIcon icon={faTwitter} />
-              </a>
-              <a href="#" aria-label="Snapchat" className={styles.filledIcon}>
-                <FontAwesomeIcon icon={faSnapchat} />
-              </a>
-            </div>
 
-            <button type="button" className={styles.loginButton}>
-              Log in
-            </button>
+              <SocialMedia />
 
-            <LanguageSelector
-              currentLanguage={language}
-              languages={languages}
-              onChange={setLanguage}
-            />
+              <button type="button" className={styles.loginButton}>
+                Log in
+              </button>
+
+              <LanguageSelector
+                currentLanguage={language}
+                languages={languages}
+                onChange={setLanguage}
+              />
             </div>
           </div>
         </div>
